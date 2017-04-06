@@ -4,16 +4,14 @@ var fs = require('fs');
 
 this.name = 'node.ninjas';
 
+var fn = (function () {
+  return this.name;
+}).bind(this);
+
 // warmup
 for (var i = 1; i < 10000; i++) {
-  var fn = () => {
-    return this.name;
-  }
+  fn();
 }
-
-var fn = function() {
-  return this.name;
-}.bind(this);
 
 var diffs = [];
 var n = 5000;
@@ -35,5 +33,3 @@ fs.writeFile('speed_bind_invocation.csv', csv, function(err) {
     if (err) throw err;
     console.log('file saved');
 });
-
-

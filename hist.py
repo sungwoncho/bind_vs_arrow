@@ -27,8 +27,8 @@ print('max', max(values))
 print('mean', mean(values))
 print('std', std(values))
 
-df  = pd.read_csv(filename)
-df.plot()  # plots all columns against index
-plt.show()
+#df  = pd.read_csv(filename)
+#df.plot()  # plots all columns against index
+#plt.show()
 
 

@@ -4,14 +4,16 @@ var fs = require('fs');
 
 this.name = 'node.ninjas';
 
-var fn = () => {
-  return this.name;
-}
-
 // warmup
 for (var i = 1; i < 10000; i++) {
-  fn();
+  var fn = () => {
+    return this.name;
+  }
 }
+
+var fn = function() {
+  return this.name;
+}.bind(this);
 
 var diffs = [];
 var n = 5000;
@@ -29,7 +31,7 @@ var data = diffs.map(function(d) {
 });
 var csv = json2csv({ data: data, fields: [ 'time' ]})
 
-fs.writeFile('speed_arrow_invocation.csv', csv, function(err) {
+fs.writeFile('speed_bind_alloc.csv', csv, function(err) {
     if (err) throw err;
     console.log('file saved');
 });
