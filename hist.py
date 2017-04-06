@@ -1,6 +1,6 @@
-import csv
-import sys
-import pandas as pd
+# import csv
+# import sys
+# import pandas as pd
 import matplotlib.pyplot as plt
 from numpy import std, mean, abs, median
 
@@ -30,5 +30,3 @@ print('std', std(values))
 #df  = pd.read_csv(filename)
 #df.plot()  # plots all columns against index
 #plt.show()
-
-
