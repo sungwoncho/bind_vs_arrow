@@ -6,9 +6,9 @@ this.name = 'node.ninjas';
 
 // warmup
 for (var i = 1; i < 10000; i++) {
-  var fn = () => {
+  var fn = function() {
     return this.name;
-  }
+  }.bind(this);
 }
 
 var fn = function() {
