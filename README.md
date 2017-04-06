@@ -14,33 +14,33 @@ Used for a talk:
 
 ## Files
 
-* `size_arrow.js`
+### size_arrow.js
 
 Outputs the memory usage of an arrow function
 
-* `size_bind.js`
+### size_bind.js
 
 Outputs the memory usage of a bound function
 
-* `speed_arrow_alloc.js`
+### speed_arrow_alloc.js
 
 Creates a csv file `speed_arrow_alloc.csv` containing allocation speed of an arrow function.
 
 Feed the csv file to `hist.py` to get the statistics ('min,' 'max,' 'mean,' 'standard deviation').
 
-* `speed_arrow_invocation.js`
+### speed_arrow_invocation.js
 
 Creates a csv file `speed_arrow_alloc.csv` containing invocation speed of an arrow function.
 
-* `speed_bind_alloc.js`
+### speed_bind_alloc.js
 
 Creates a csv file `speed_bind_alloc.csv` containing allocation speed of a bound function.
 
-* `speed_bind_invocation.js`
+### speed_bind_invocation.js
 
 Creates a csv file `speed_bind_alloc.csv` containing invocation speed of a bound function.
 
-* `hist.py`
+### hist.py
 
 Outputs statistics for a given csv.
 
@@ -54,8 +54,8 @@ Outputs statistics for a given csv.
 
 **Required**
 
-* python (either 2 or 3)
 * numpy
+
 
 ## Try
 
